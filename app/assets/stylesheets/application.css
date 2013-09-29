@@ -11,3 +11,49 @@
  *= require_self
  *= require_tree .
  */
+
+* {
+	font-family: 'Oxygen', sans-serif;
+}
+
+h1 {
+	background-color: silver;
+	opacity: 0.5;
+	padding: 10px;
+	text-align: center;
+}
+
+ul {
+ list-style-type: none;
+}
+
+div.list {
+	width: 200px;
+	height: 200px;
+	float: left;
+}
+
+li {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 200px;
+	text-transform: uppercase;
+}
+
+li:nth-child(odd) {
+	background-color: #EDDE45;
+}
+
+li:nth-child(even) {
+	background-color: turquoise;
+}
+
+a {
+	text-decoration: none;
+	color: #666;
+}
+
+div.description {
+	width: 500px;
+	height: auto;
+}

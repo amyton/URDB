@@ -1,9 +1,16 @@
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+</head>
+
 <h1><%= @movie.title %></h1>
 
-<%= image_tag @movie.gif_url %> <br />
+<div class="description"><p><%= @movie.description %></p></div>
 
-<iframe width="420" height="315" src="//www.youtube.com/embed/<%= @movie.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+<br />
+<%= image_tag @movie.gif_url %>
 
-<p><%= @movie.description %></p>
+<iframe width="500" height="315" src="//www.youtube.com/embed/<%= @movie.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+
+
 
 <p><%= link_to 'back', movies_url %></p>

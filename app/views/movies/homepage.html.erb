@@ -1,10 +1,17 @@
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+</head>
+
 <h1>URDB: Awesome Movie Database!</h1>
+
 
 <ul> 
 	<% @all_movies.each do |movie| %>
-		<li>
-			<%= link_to movie.title, movie_url(movie.id) %>
-		</li>
+		<div class="list">	
+			<li>
+				<%= link_to movie.title, movie_url(movie.id) %>
+			</li>
+		</div>
 	<% end %>
 </ul>
 
