@@ -12,14 +12,28 @@
  *= require_tree .
  */
 
-* {
+h1, p, li {
 	font-family: 'Oxygen', sans-serif;
 }
 
+div {
+	margin: auto;
+}
+
+div.header {
+	text-align: center;
+}
+
+body {
+	margin: 0;
+}
+
 h1 {
-	background-color: silver;
-	opacity: 0.5;
-	padding: 10px;
+	background: #d1f1ee;
+	color: #666;
+	padding: 20px 0;
+	width: 500px;
+	margin: 0 auto;
 	text-align: center;
 }
 
@@ -28,32 +42,34 @@ ul {
 }
 
 div.list {
-	width: 200px;
-	height: 200px;
-	float: left;
+	width: 500px;
 }
 
 li {
 	text-align: center;
-	vertical-align: middle;
-	line-height: 200px;
 	text-transform: uppercase;
-	background-color: #EDDE45;
+	background-color: #A3B2BC;
 }
 
 a {
 	text-decoration: none;
 	color: #666;
-	display: block;
+	display: block; 
+	padding: 10px 0;
 }
 
 a:hover {
-	background-color: turquoise;
+	background-color: #fff;
 	color: #ac0d5f;
-	opacity: 0.8;
+	opacity: 0.3;
 }
 
 div.description {
 	width: 500px;
 	height: auto;
 }
+
+div.image {
+	margin: auto;
+}
+
