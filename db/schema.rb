@@ -11,13 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130927235432) do
+ActiveRecord::Schema.define(version: 20131009205718) do
 
   create_table "movies", force: true do |t|
     t.string   "title"
     t.string   "gif_url"
     t.string   "youtube_id"
-    t.string   "description"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles", force: true do |t|
+    t.string   "character"
+    t.integer  "movie_id_id"
+    t.integer  "star_id_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stars", force: true do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.string   "headshot_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
