@@ -1,4 +1,4 @@
-class Movie < ActiveRecord::Base
+unclass Movie < ActiveRecord::Base
   has_many :showtimes
   has_many :roles
   has_many :stars, through: :roles
