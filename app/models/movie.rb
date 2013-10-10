@@ -9,5 +9,6 @@ class Movie < ActiveRecord::Base
   
   def snippet
     description.truncate 50
+    
   end
 end
