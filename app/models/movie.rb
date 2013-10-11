@@ -17,6 +17,13 @@ class Movie < ActiveRecord::Base
   end
 
   def self.average_rating
+    scores = self.all.collect do |movie|
+      movie.audience_rating
+    end
+
+    sum = scores.sum
+
+    sum / scores.length
   end
-  
+
 end

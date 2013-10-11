@@ -53,13 +53,16 @@ describe Movie do
       it "returns the average audience_score for all movies" do
         allow(movie).to receive(:audience_rating).and_return(100) 
         allow(movie2).to receive(:audience_rating).and_return(50) 
-        allow(Movie).to receive(:all).and_return([])
-        expect(Movie.average_rating).to eq("75")
+        allow(Movie).to receive(:all).and_return([movie, movie2])
+        expect(Movie.average_rating).to eq(75)
       end
     end
 
     context "when some movies are not found on Rotten Tomatoes" do
-      it "returns the average audience_score of the movies that were found"
+      it "returns the average audience_score of the movies that were found" do
+        allow(movie).to receive(:audience_rating).and_return(nil)
+        expect(Movie.average_rating).to eq()
+      end
     end
 
     context "when no movies are found on Rotten Tomatoes" do
@@ -67,3 +70,20 @@ describe Movie do
     end
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
