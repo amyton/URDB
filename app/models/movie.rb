@@ -13,7 +13,11 @@ class Movie < ActiveRecord::Base
   end
 
   def audience_rating
-    rotten_finder.ratings.audience_score
+    if rotten_finder == []
+      return nil
+    else
+      rotten_finder.ratings.audience_score
+    end
   end
 
   def self.average_rating
@@ -21,9 +25,11 @@ class Movie < ActiveRecord::Base
       movie.audience_rating
     end
 
-    sum = scores.sum
+    scores.compact!
 
-    sum / scores.length
+    if scores.length > 0
+      scores.sum / scores.length
+    end
   end
 
 end
